@@ -1,0 +1,11 @@
+﻿Product_ID,Product_Name,Price,Quantity,Supplier,Category
+101,Apple iPhone 12,799.99 USD,10,Apple,Smartphones
+102,Samsung Galaxy S21,899.99 USD,5,Samsung,Smartphones
+103,Google Pixel 5,$699.99 ,8,Google,Smartphones
+104,Sony WH-1000XM4,$349.99 ,15,Sony,Headphones
+105,Bose QuietComfort 35 II,299.99 USD,20,Bose,Headphones
+106,Apple MacBook Pro,"$1,299.99 ",3,Apple,Laptops
+107,Dell XPS 13,999.99 USD,7,Dell,Laptops
+108,HP Spectre x360,"$1,199.99 ",4,HP,Laptops
+109,Microsoft Surface Pro 7,899.99 USD,6,Microsoft,Tablets
+110,Amazon Kindle,$89.99 ,30,Amazon,Tablets
