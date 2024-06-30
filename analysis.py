@@ -133,3 +133,19 @@ plt.xlabel('Roles')
 plt.ylabel('Difficulty')
 plt.savefig('pic/pointplot_difficulty.png')
 plt.show()
+
+
+# 绘制热图
+# 重新读取数据
+data = np.load('data/clean_lol_data.npy')
+data = np.array(data[:, 1:], dtype=np.int32)
+# 计算相关系数
+data_corr = np.corrcoef(data.T)
+# 根据相关系数矩阵绘图
+plt.imshow(data_corr, cmap='viridis',vmax=1, vmin=-1)
+plt.colorbar()
+plt.xticks([0, 1, 2, 3], ['attack', 'defense', 'magic', 'difficulty'])
+plt.yticks([0, 1, 2, 3], ['difficulty', 'magic', 'defense', 'attack'])
+plt.title('heatmap')
+plt.savefig('pic/heatmap.png')
+plt.show()
