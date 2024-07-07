@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-data = np.load('data\clean_lol_data_add_col.npy')
+data = np.load('clean_lol_data_add_col.npy')
 
 
 #统计数据
@@ -51,7 +51,7 @@ plt.pie(values_pie,labels=labels_pie,explode=explode,colors=colors_pie,
         startangle = 90,
         shadow=True,autopct='%1.1f%%')
 plt.axis('equal')
-plt.savefig('pic/roles_ratio.png')
+plt.savefig('roles_ratio.png')
 plt.show()
 
 #绘制柱状图
@@ -59,5 +59,5 @@ colors_pie=['#F7A6AC','#F7B7D2','#EEC186','#EEF0A7','#B2DBB9','#B8E5FA']#颜色
 
 plt.title("difficulty distribution",fontsize=25)
 plt.bar(index_bar,values_bar)
-plt.savefig('pic/diff_distribution.png')
+plt.savefig('diff_distribution.png')
 plt.show()
