@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = np.load('clean_lol_data.npy')
+data = np.load('data/clean_lol_data.npy')
 roles = ['mage', 'fighter', 'tank', 'assassin', 'support', 'marksman']
 colors = ['#1890FF', '#2FC25B', '#FACC14', '#223273', '#8543E0', '#13C2C2']
 attributes = ['attack', 'defense', 'magic', 'difficulty']
@@ -27,7 +27,7 @@ for index, attribute in enumerate(attributes):
     ax.set_ylabel(attribute)
 
 plt.tight_layout()
-plt.savefig('violinplot.png')
+plt.savefig('pic/violinplot.png')
 plt.show()
 
 
@@ -55,7 +55,7 @@ for index, attribute in enumerate(attributes):
     ax.set_ylabel(attribute)
 
 plt.tight_layout()
-plt.savefig('pointplot.png')
+plt.savefig('pic/pointplot.png')
 plt.show()
 
 
@@ -67,7 +67,7 @@ data_corr = np.corrcoef(data.T)
 plt.imshow(data_corr, cmap='viridis',vmax=1, vmin=-1)
 plt.colorbar()
 plt.xticks([0, 1, 2, 3], ['attack', 'defense', 'magic', 'difficulty'])
-plt.yticks([0, 1, 2, 3], ['difficulty', 'magic', 'defense', 'attack'])
+plt.yticks([0, 1, 2, 3], ['attack', 'defense', 'magic', 'difficulty'])
 plt.title('heatmap')
-plt.savefig('heatmap.png')
+plt.savefig('pic/heatmap.png')
 plt.show()
