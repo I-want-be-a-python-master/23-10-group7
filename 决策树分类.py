@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 
-data = np.load('clean_lol_data.npy')
+data = np.load('data/clean_lol_data.npy')
 columns = ['roles', 'attack', 'defense', 'magic', 'difficulty']
 
 # 对数据进行可视化
@@ -32,7 +32,7 @@ for i in range(4):
 
 plt.tight_layout(rect=[0, 0, 1, 0.9])
 plt.suptitle('roles\nfighter | mage | tank | assassin | support | marksman', fontsize=20)
-plt.savefig('scatter.png')
+plt.savefig('pic/scatter.png')
 plt.show()
 
 # 对数据进行切分，分出训练集和测试集
@@ -60,5 +60,5 @@ fig = plt.figure(figsize=(20, 20))
 tree.plot_tree(dtc, filled=True,
                feature_names=['attack', 'defense', 'magic', 'difficulty'],
                class_names=['fighter', 'mage', 'tank', 'assassin', 'support', 'marksman'])
-plt.savefig('tree.png')
+plt.savefig('pic/tree.png')
 plt.show()
